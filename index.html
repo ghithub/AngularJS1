@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-<script src="modules.js"></script>
+
 <body>
 
 <!--Use the first app-->
@@ -17,9 +17,13 @@
 <!--Use the second app-->
 <div id="second" ng-app="empApp">
 	<div ng-controller="employee">		
-		<span> {{employee.firstName}} {{employee.lastName}}
-		</span>
+		<div> {{employee.firstName}} {{employee.lastName}}
+		</div>		
+		
+		<div> {{employee.fullName()}}
+		</div>
 	</div>
 </div>
+<script src="modules.js"></script>
 </body>
 </html>

@@ -13,12 +13,17 @@
    emp.controller("employee", function ($scope){
 	$scope.employee = {
 	   firstName: "Matt",
-	   lastName: "Kidder"
+	   lastName: "Kidder",
+	   fullName: function(){
+		   //var obj; 
+		   //obj = $scope.employee;
+		   return this.firstName + " " + this.lastName;		   
+	   }
 	};   
    });
    
-   //Angular will always bootstrap the first app defined in the view. So, 
-   //in this case, mainApp is already bootstrapped. So, do NOT manually
+   //Angular will always bootstrap the first app defined in the view. 
+   //In this case, mainApp is already bootstrapped. So, do NOT manually
    //bootstrap it, or else exception will occur.   
    //var first = document.getElementById("first");   
    //angular.bootstrap(angular.element(first), ["mainApp"]);
