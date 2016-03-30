@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css"></link>
+<link rel="stylesheet" type="text/css" href="style.css" />
 <body>
 
 <!--Use the first app-->
@@ -31,15 +31,15 @@
 			  <th>Strength</th>
 			  </tr>
 			</thead>
-			<tr ng-repeat = "s in employee.skills">
+			
+			<!--BELOW: the property strength has to be quoted after orderBy, otherwise, it won't work.-->
+			<tr ng-repeat = "s in employee.skills | orderBy:'strength'">
 			   <td>{{s.name}}</td>
-			   <td>{{s.strength}}			
+			   <td>{{s.strength}}</td>			
 			</tr>
 		  </table>
-		</div>
-		
+		</div>		
 	</div>	
-	
 </div>
 <script src="modules.js"></script>
 </body>
