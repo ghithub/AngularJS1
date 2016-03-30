@@ -18,7 +18,15 @@
 		   //var obj; 
 		   //obj = $scope.employee;
 		   return this.firstName + " " + this.lastName;		   
-	   }
+	   },
+	   skills: [
+	    {name: "C#", strength: 10},
+	    {name: "JavaScript", strength: 6},
+	    {name: "VB", strength: 1},
+	    {name: "jQuery", strength: 2},
+		{name: "T-SQL", strength: 5},
+		{name: "UI Design", strength: 8}
+	   ]
 	};   
    });
    

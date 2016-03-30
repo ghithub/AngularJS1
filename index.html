@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-
+<link rel="stylesheet" type="text/css" href="style.css"></link>
 <body>
 
 <!--Use the first app-->
@@ -20,9 +20,26 @@
 		<div> {{employee.firstName}} {{employee.lastName}}
 		</div>		
 		
-		<div> {{employee.fullName()}}
+		<div> {{employee.fullName() | uppercase}}
 		</div>
-	</div>
+		
+		<div>
+		  <table>
+		    <thead>
+			  <tr>
+			  <th>Skill</th>
+			  <th>Strength</th>
+			  </tr>
+			</thead>
+			<tr ng-repeat = "s in employee.skills">
+			   <td>{{s.name}}</td>
+			   <td>{{s.strength}}			
+			</tr>
+		  </table>
+		</div>
+		
+	</div>	
+	
 </div>
 <script src="modules.js"></script>
 </body>
