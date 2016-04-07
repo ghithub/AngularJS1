@@ -2,7 +2,7 @@
 // create the module and name it app
 var app = angular.module("mainApp", ['ngRoute']);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider, $locationProvider){
 	$routeProvider
 	.when("/", {
 		templateUrl: "home.html",
@@ -16,6 +16,8 @@ app.config(function($routeProvider){
 		templateUrl: "contact.html",
 		controller: "contactController"
 	});	
+	
+	$locationProvider.html5Mode(true);
 });
 
 // create the controller and inject Angular's $scope
