@@ -7,6 +7,23 @@
 	$scope.Hola.ln = "doe";
    });
    
+   app.config(["$routeProvider", function($routeProvider){
+	   $routeProvider.
+	   when("/link1", {
+		   templateUrl: "link1.html",
+		   controller: "Link1"
+	   }).
+	   when("/link2", {
+		   templateUrl: "link2.html",
+		   controller: "Link2"
+	   }).
+	   when("/link3", {
+		   templateUrl: "link3.html",
+		   controller: "Link3"
+	   });
+   }]   
+   );
+   
    // 2. Define the second app.
    var emp = angular.module("empApp", []);
    

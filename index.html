@@ -1,46 +1,39 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css" />
-<body>
+    <!DOCTYPE html>
+    <html ng-app="mainApp">
+    <head>
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+	  
+      <!-- load angular and angular route via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="main.js"></script>
+    </head>
+    <body ng-controller="mainController">
 
-<!--Use the first app-->
-<div id="first" ng-app="mainApp">
-	<div ng-controller="test">	
-		<input type="text" ng-model="Hola.fn" />
-		<input type="text" ng-model="Hola.ln" />
-		<p>Hello <span ng-bind="Hola.fn"></span> <span ng-bind="Hola.ln"></span></p>
-		<p>Hello {{Hola.fn}} {{Hola.ln}}</p>
-	</div>
-</div>
+        <!-- HEADER AND NAVBAR -->
+        <header>
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Routing Example</a>
+                </div>
 
-<!--Use the second app-->
-<div id="second" ng-app="empApp">
-	<div ng-controller="employee">		
-		<div> {{employee.firstName}} {{employee.lastName}}
-		</div>		
-		
-		<div> {{employee.fullName() | uppercase}}
-		</div>
-		
-		<div>
-		  <table>
-		    <thead>
-			  <tr>
-			  <th>Skill</th>
-			  <th>Strength</th>
-			  </tr>
-			</thead>
-			
-			<!--BELOW: the property strength has to be quoted after orderBy, otherwise, it won't work.-->
-			<tr ng-repeat = "s in employee.skills | orderBy:'strength'">
-			   <td>{{s.name}}</td>
-			   <td>{{s.strength}}</td>			
-			</tr>
-		  </table>
-		</div>		
-	</div>	
-</div>
-<script src="modules.js"></script>
-</body>
-</html>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+            <!-- angular templating -->
+			<div ng-view></div>
+        </div>
+
+    </body>
+    </html>

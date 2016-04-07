@@ -1,0 +1,36 @@
+// main.js
+// create the module and name it app
+var app = angular.module("mainApp", ['ngRoute']);
+
+app.config(function($routeProvider){
+	$routeProvider
+	.when("/", {
+		templateUrl: "home.html",
+		controller: "mainController"
+	})
+	.when("/about", {
+		templateUrl: "about.html",
+		controller: "aboutController"
+	})
+	.when("/contact", {
+		templateUrl: "contact.html",
+		controller: "contactController"
+	});	
+});
+
+// create the controller and inject Angular's $scope
+app.controller("mainController", function($scope) {
+    // create a message to display in our view
+    $scope.message = "test only!";
+});
+
+app.controller("aboutController", function($scope) {
+    // create a message to display in our view
+    $scope.message = "about only!";
+});
+
+app.controller("contactController", function($scope) {
+    // create a message to display in our view
+    $scope.message = "contact only!";
+});
+
