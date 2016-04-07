@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<select ng-model="selectedName" ng-change="updateLabel()" ng-options="x for x in names">
+</select>
+
+<span id="item"></span>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $log) {
+    $scope.names = ["Emil", "Tobias", "Linus"];
+    $scope.log = $log;
+    $scope.updateLabel = function(){
+        this.log.info("selectedName", $scope.selectedName);
+        this.log.info(this);
+        //var span = document.getElementById("item");
+        //span.innerHTML = selectedName;
+    };
+});
+
+</script>
+
+<p>This example shows how to fill a dropdown list using the ng-options directive.</p>
+
+</body>
+</html>
