@@ -15,7 +15,11 @@ app.config(function($routeProvider, $locationProvider){
 	.when("/contact", {
 		templateUrl: "contact.html",
 		controller: "contactController"
-	});	
+	})
+	.when("/contact2", {
+		templateUrl: "contact2.html",
+		controller: "contact2Controller"
+	})	
 	
 	//$locationProvider.html5Mode(true);
 });
@@ -23,7 +27,7 @@ app.config(function($routeProvider, $locationProvider){
 // create the controller and inject Angular's $scope
 app.controller("mainController", function($scope) {
     // create a message to display in our view
-    $scope.message = "test only!";
+    $scope.message = "test only!";	
 });
 
 app.controller("aboutController", function($scope) {
@@ -35,4 +39,10 @@ app.controller("contactController", function($scope) {
     // create a message to display in our view
     $scope.message = "contact only!";
 });
+
+app.controller("contact2Controller", function($scope) {
+    // create a message to display in our view
+    $scope.message = "contact2 only!";
+});
+
 

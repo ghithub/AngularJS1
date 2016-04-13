@@ -4,10 +4,11 @@
       <!-- load bootstrap and fontawesome via CDN -->
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-	  
+	  <link rel="stylesheet" href="main.css" />
       <!-- load angular and angular route via CDN -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>	  
+	  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>	  
       <script src="main.js"></script>
 	  <base href="/">
     </head>
@@ -25,16 +26,16 @@
                     <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
                     <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
                     <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+					<li><a href="#contact2"><i class="fa fa-comment"></i> Contact2</a></li>
                 </ul>
             </div>
             </nav>
         </header>
 
         <!-- MAIN CONTENT AND INJECTED VIEWS -->
-        <div id="main">
+        <div id="main">			
             <!-- angular templating -->
-			<div ng-view></div>
+			<div ng-view></div>		
         </div>
-
     </body>
     </html>
