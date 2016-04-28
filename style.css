@@ -1,13 +1,207 @@
- table, th , td {
-            border: 1px solid grey;
-            border-collapse: collapse;
-            padding: 5px;
-         }
-         
-         table tr:nth-child(odd) {
-            background-color: #f2f2f2;
-         }
-         
-         table tr:nth-child(even) {
-            background-color: #ffffff;
-         }
+@charset "utf-8";
+/* CSS Document */
+
+body{
+  margin:15px 0 0 0;
+  padding:0;
+  background:#8fabb6 url(images/banckground.jpg) repeat-x top;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight:normal;
+  color:#434343;
+}
+
+
+
+#header{
+  width:750px;
+  height:77px;
+  background:url(images/header.jpg) no-repeat;
+  margin:0 auto;
+}
+
+
+
+#navigation{
+  width:750px;
+  height:25px;
+  background:url(images/navigation_background.jpg) repeat-x top;
+  margin:0 auto;
+}
+ #navigation ul{
+  list-style:none;
+  padding:4px 0 0 0;
+  margin:0 0 0 5px;
+  }
+  #navigation ul li{
+  float:left;
+  padding-right:15px;
+  padding-left:15px;
+  background:url(images/divider_line.gif) no-repeat right;
+  font-size:14px;
+  font-weight:bold;
+  color:#FFFFFF;
+  }
+  #navigation a:link, a:visited, a:active{
+  color:#ffffff;
+  text-decoration:none;
+  }
+  #navigation a:hover{
+  text-decoration:underline;
+  }
+
+
+
+#breadcrumb{
+  width:710px;
+  height:21px;
+  background:url(images/path_background.jpg) repeat-x top;
+  margin:0 auto;
+  padding:0 20px;
+  line-height:21px;
+}
+
+
+
+#main_pic{
+  width:750px;
+  height:200px;
+  background:url(images/main_pic.jpg) no-repeat top;
+  margin:0 auto;
+}
+  #main_pic h2{
+  font-size:26px;
+  font-weight:bold;
+  color:#FFFFFF;
+  margin:0;
+  padding:50px 20px 15px 20px;
+  }
+  #main_pic p{
+  font-size:14px;
+  font-weight:normal;
+  color:#FFFFFF;
+  margin:0;
+  padding:0px 20px 20px 20px;
+  }
+
+
+
+#main_container{
+  width:750px;
+  background:#FFFFFF url(images/main_background01.jpg) repeat-x top;
+  margin:0 auto;
+}
+  #main_container .main_content{
+  width:720px;
+  padding:10px 15px;
+  background:url(images/main_background02.jpg) repeat-x bottom;
+  overflow:hidden;
+  }
+  #main_container a{
+  color:#1e64aa;
+  text-decoration:underline;
+  }
+  #main_container a:hover{
+  color:#db3169;
+  }
+  #main_container h3{
+  font-size:18px;
+  font-weight:bold;
+  color:#db3169;
+  margin:15px 0 0 0;
+  }
+  #main_container h4{
+  font-size:18px;
+  font-weight:bold;
+  color:#db3169;
+  margin:0;
+  }
+  #main_container .left img{
+  float:left;
+  margin:5px 15px 15px 0;
+  }
+  #main_container p{
+  line-height:20px;
+  margin:10px 0 0 0;
+  }
+  #main_container .left{
+  width:476px;
+  padding-right:30px;
+  overflow:hidden;
+  float:left;
+  }
+  #main_container .left_list{
+  width:230px;
+  padding-right:16px;
+  float:left;
+  }
+  #main_container .right_list{
+  width:230px;
+  float:left;
+  }
+  #main_container ul{
+  margin:10px 0 0 0;
+  padding:0 0 0 17px;
+  }
+  #main_container ul li{
+  list-style:url(images/dot.jpg);
+  line-height:22px;
+  }
+  
+  #main_container .right{
+  float:right;
+  width:214px;
+  }
+  #main_container .testimonial{
+  width:214px;
+  background:url(images/border_bottom.jpg) no-repeat bottom;
+  margin-bottom:10px;
+  }
+  #main_container .testimonial01{
+  width:190px;
+  background:url(images/border_top.jpg) no-repeat top;
+  padding:15px 12px 12px 12px;
+  }
+  #main_container .recent_case{
+  width:214px;
+  background:url(images/recent_case.jpg) no-repeat top;
+  }
+  #main_container .recent_case01{
+  width:190px;
+  background:url(images/recent_case_bottom.jpg) no-repeat bottom;
+  padding:15px 12px 12px 12px;
+  }
+  #main_container .title{
+  font-weight:bold;
+  display:block;
+  }
+  #main_container .recent_case01 img{
+  display:block;
+  border:0;
+  }
+  
+  
+#footer{
+  width:750px;
+  height:62px;
+  background:url(images/footer.jpg) no-repeat top;
+  margin:0 auto 10px auto;
+  padding-top:20px;
+  color:#476472;
+}
+  #footer a{
+  color:#476472;
+  text-decoration:none;
+  }
+  #footer a:hover{
+  text-decoration:underline;
+  }
+  #footer .copyright{
+  float:left;
+  padding-left:18px;
+  padding-right:18px;
+  }
+  #footer .footer_link{
+  float:right;
+  padding-right:18px;
+  }

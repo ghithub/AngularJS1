@@ -8,6 +8,14 @@ app.config(function($routeProvider, $locationProvider){
 		templateUrl: "home.html",
 		controller: "mainController"
 	})
+	.when("/services", {
+		templateUrl: "services.html",
+		controller: "servicesController"
+	})
+	.when("/clients", {
+		templateUrl: "clients.html",
+		controller: "clientsController"
+	})
 	.when("/about", {
 		templateUrl: "about.html",
 		controller: "aboutController"
@@ -16,10 +24,6 @@ app.config(function($routeProvider, $locationProvider){
 		templateUrl: "contact.html",
 		controller: "contactController"
 	})
-	.when("/contact2", {
-		templateUrl: "contact2.html",
-		controller: "contact2Controller"
-	})	
 	
 	//$locationProvider.html5Mode(true);
 });
@@ -30,6 +34,16 @@ app.controller("mainController", function($scope) {
     $scope.message = "test only!";	
 });
 
+app.controller("servicesController", function($scope) {
+    // create a message to display in our view
+    $scope.message = "services only!";	
+});
+
+app.controller("clientsController", function($scope) {
+    // create a message to display in our view
+    $scope.message = "clients only!";	
+});
+
 app.controller("aboutController", function($scope) {
     // create a message to display in our view
     $scope.message = "about only!";
@@ -37,12 +51,5 @@ app.controller("aboutController", function($scope) {
 
 app.controller("contactController", function($scope) {
     // create a message to display in our view
-    $scope.message = "contact only!";
+    $scope.message = "contact us only!";
 });
-
-app.controller("contact2Controller", function($scope) {
-    // create a message to display in our view
-    $scope.message = "contact2 only!";
-});
-
-
